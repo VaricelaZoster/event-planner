@@ -8,4 +8,6 @@ export default async function proxy(request: NextRequest) {
   })(request);
 }
 
-
+export const config = {
+  matcher: ["/dashboard/:path*"],
+};
