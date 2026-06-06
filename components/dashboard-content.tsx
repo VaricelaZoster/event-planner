@@ -11,7 +11,7 @@ const DashboardContent = async({userId}: {userId: string}) => {
           <p className='text-sm text-muted-foreground'>Track attendee responses and manage invite links</p>
         </div>
         <Button asChild>
-          <Link href={"/event/new"}>Create event</Link>
+          <Link href={"/events/new"}>Create event</Link>
         </Button>
       </div>
 
