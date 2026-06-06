@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import { createEventAction } from "@/lib/actions/events"
 
 const Page = () => {
   return (
@@ -17,7 +18,7 @@ const Page = () => {
         </CardHeader>
 
         <CardContent>
-          <form className="space-y-6">
+          <form className="space-y-6" action={createEventAction}>
             <div className="space-y-2">
               <Label>Title</Label>
 
