@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from './ui/card'
 import { Badge } from './ui/badge'
 import type { RsvpStatus as PrismaRsvpStatus } from '@prisma/client'
 
-function countByStatus(rsvps: {status: PrismaRsvpStatus}[]){
+export function countByStatus(rsvps: {status: PrismaRsvpStatus}[]){
   let goingCount = 0
   let maybeCount = 0
   let notGoingCount = 0
@@ -80,9 +80,9 @@ const DashboardContent = async ({ userId }: { userId: string }) => {
                     </Button>
                   </div>
                   <div className='flex flex-wrap gap-2 text-xs'>
-                    <Badge variant="secondary" >Going: {event.goingCount}</Badge>
+                    <Badge variant="default" >Going: {event.goingCount}</Badge>
                     <Badge variant="secondary" >Maybe: {event.maybeCount}</Badge>
-                    <Badge variant="secondary" >Not Going: {event.notGoingCount}</Badge>
+                    <Badge variant="outline" >Not Going: {event.notGoingCount}</Badge>
                   </div>
                   <p>
                     {event.eventDate
