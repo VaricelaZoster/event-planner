@@ -33,11 +33,11 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <NeonAuthUIProvider authClient={authClient as any} emailOTP credentials={{forgotPassword: true}} defaultTheme="dark">
-          <header className="border-b border-(--border) bg-(--surface)/90 backdrop-blur ">
+          <header className="border-b border-border bg-(--surface)/90 backdrop-blur ">
             <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-4">
               <Link className="text-sm font-semibold tracking-wide" href={"/"}>Event Planner</Link>
               <nav className="flex items-center gap-4">
-                <Link className="text-sm text-(--muted-foreground)" href={"/dashboard"}>Dashboard</Link>
+                <Link className="text-sm text-muted-foreground" href={"/dashboard"}>Dashboard</Link>
                 <UserButton size="icon"></UserButton>
               </nav>
             </div>
